@@ -1,0 +1,36 @@
+.slider {
+  position: relative;
+
+  &__main {
+    margin: -20px -16px;
+    padding: 20px 16px;
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__next,
+  &__prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+
+  &__prev {
+    left: -20px;
+  }
+  
+  &__next {
+    right: -20px;
+  }
+}

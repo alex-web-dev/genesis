@@ -1,0 +1,36 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 16px;
+
+  &__img {
+    margin-bottom: 32px;
+    width: 48px;
+    height: 48px;
+
+    img {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    margin-top: auto;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 24px;
+  }
+
+  @media (max-width: 767px) {
+    &__img {
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

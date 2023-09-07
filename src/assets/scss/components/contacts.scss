@@ -1,0 +1,158 @@
+.contacts {
+  position: relative;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__main {
+    height: 825px;
+    pointer-events: none;
+
+    &-content {
+      position: relative;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    top: 185px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 600px;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    pointer-events: all;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__email {
+    margin-top: 4px;
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  &__address {
+    margin-top: 32px;
+
+    &-item {
+      line-height: 1.5;
+      font-weight: 500;
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+    }
+
+    &-label {
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: var(--color-primary);
+    }
+  }
+
+  &__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      pointer-events: none;
+    }
+  
+    &:before {
+      top: 0;
+      height: 97px;
+      background: url('../img/line-down-bg.svg') bottom / cover no-repeat;
+    }
+  
+    &:after {
+      bottom: -1px;
+      height: 110px;
+      background: url('../img/line-up-bg.svg') top / cover no-repeat;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__main {
+      height: 680px;
+    }
+
+    &__address {
+      margin-top: 24px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+      position: relative;
+      transform: translateY(-125px);
+      margin-bottom: -70px;
+      z-index: 2;
+      order: 2;
+      height: auto;
+    }
+
+    &__info {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      top: unset;
+      padding: 24px;
+    }
+
+    &__map {
+      position: relative;
+      height: 575px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__map {
+      &:before {
+        height: 51px;
+        background: url('../img/line-down-small-bg.svg') bottom / cover no-repeat;
+      }
+    
+      &:after {
+        height: 35px;
+        background: url('../img/line-up-small-bg.svg') top / cover no-repeat;
+      }
+    }
+
+    &__address {
+      &-label {
+        font-size: 12px;
+      }
+    }
+  }
+}

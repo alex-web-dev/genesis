@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixins";
+@import "libs";
+@import "base";
+@import "fonts";
+@import "animate";
+
+@import "./global";
+@import "./global-media";
+
+@import "./components/btn";
+@import "./components/swiper";
+@import "./components/menu";
+@import "./components/tabs-btns";
+@import "./components/tabs";
+@import "./components/lang-control";
+@import "./components/slider";
+@import "./components/header";
+@import "./components/main";
+@import "./components/banner";
+@import "./components/about";
+@import "./components/product";
+@import "./components/products";
+@import "./components/feature";
+@import "./components/features";
+@import "./components/partner";
+@import "./components/partners";
+@import "./components/contacts";
+@import "./components/footer";

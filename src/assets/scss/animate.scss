@@ -1,0 +1,21 @@
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-6px);
+  }
+
+  45% {
+    transform: translateY(6px);
+  }
+  
+  50% {
+    transform: translateY(6px);
+  }
+
+  95% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(-6px);
+  }
+}

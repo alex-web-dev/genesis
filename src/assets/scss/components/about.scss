@@ -1,0 +1,167 @@
+.about {
+  position: relative;
+  background-color: #fff;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &:before {
+    top: -107px;
+    height: 120px;
+    background: url('../img/line-up.svg') bottom / cover no-repeat;
+  }
+
+  &:after {
+    bottom: -150px;
+    height: 150px;
+    background: url('../img/line-down.svg') top / cover no-repeat;
+  }
+
+  &__content {
+    position: relative;
+    padding-bottom: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    max-width: 600px;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+
+  &__text {
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+
+  &__message {
+    margin-top: 20px;
+    margin-left: auto;
+    padding: 44px 49px 44px 52px;
+    flex: 0 0 auto;
+    width: 413px;
+    background: url('../img/about/message-box.svg') center / contain no-repeat;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+
+    &:nth-child(1) {
+      top: -139px;
+      left: 245px;
+      animation: moveUpDown 3.2s .2s infinite linear;
+    }
+
+    &:nth-child(2) {
+      bottom: -378px;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding-top: 32px;
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__info {
+      max-width: none;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__text {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+
+    &__message {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &__img {
+      &:nth-child(1) {
+        top: -95px;
+        left: 320px;
+        width: 148px;
+      }
+
+      &:nth-child(2) {
+        bottom: -250px;
+        right: -103px;
+        width: 397px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+
+    &__text {
+      line-height: 1.53;
+      
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+
+    &__message {
+      margin-top: 32px;
+      padding: 34px 16px 34px 37px;
+      width: 312px;
+    }
+
+    &__img {
+      &:nth-child(1) {
+        top: -96px;
+        left: unset;
+        width: 129px;
+        right: -9px;
+      }
+
+      &:nth-child(2) {
+        bottom: -164px;
+        right: -75px;
+        width: 268px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &:before {
+      top: -84px;
+      height: 84px;
+      background-size: cover;
+      background-image: url('../img/line-up-small.svg');
+      background-position: left;
+    }
+
+    &:after {
+      bottom: -32px;
+      height: 72px;
+      background-size: cover;
+      background-image: url('../img/line-down-small.svg');
+      background-position: left;
+    }
+  }
+}

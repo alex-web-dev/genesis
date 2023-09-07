@@ -1,0 +1,32 @@
+.partners {
+  &__content {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    position: absolute;
+
+    &:nth-child(1) {
+      top: -60px;
+      left: 280px;
+      width: 190px;
+      z-index: 1;
+      animation: moveUpDown 3.2s .2s infinite linear;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__img {
+      &:nth-child(1) {
+        top: -43px;
+        left: unset;
+        right: -11px;
+        width: 140px;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.lang-control {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    position: relative;
+    font-weight: 700;
+    line-height: 1.375;
+    color: rgba(var(--color-primary--rgb), 0.5);
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background .3s;
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &--active {
+      color: var(--color-primary);
+
+      &:before {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
